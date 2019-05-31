@@ -9,9 +9,28 @@
 
 <body>
 
-    <header>
+    <div id="navigation">
 
-    </header>
+
+        <div class="burger_class" onclick="burgerFunct()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <header>
+
+            <nav class="nav_class" class="openNav">
+                <a href="index.html"><button>HOME</button></a>
+                <a href="#projekter"><button>PROJEKTER</button></a>
+                <a href="info.html"><button>INFO</button></a>
+                <a href="https://www.facebook.com/tokedesign.dk/"><button><img id="facebook" src="pics/hvidface.png"></button></a> <br>
+                <a href="https://www.instagram.com/tokelauridsen/"><button><img id="instagram" src="pics/hvidinsta.png"></button></a> <br>
+                <a href=""><button><img id="flag" src="pics/english.png"></button></a>
+            </nav>
+
+        </header>
+    </div>
 
 
     <img src="" alt="">
@@ -77,7 +96,16 @@
 
     </footer>
 
+    <script>
+        //------------burgermenu----------//
 
-    <script src=""></script>
+        var navig = document.querySelector(".nav_class");
+        var burgie = document.querySelector(".burger_class");
+
+        function burgerFunct() {
+            burgie.classList.toggle("change");
+            navig.classList.toggle("openNav");
+        }
+    </script>
 </body>
 </html>
