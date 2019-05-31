@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: khmer MN;
+}
+
+
+/*------------BURGER MENU-------------*/
+
+body {
+    background-color: #e5e5e5;
+    margin: 0%;
+    padding: 0;
+}
+
+#facebook {
+    width: 35px;
+    margin-top: 5px;
+}
+
+#instagram {
+    width: 35px;
+    margin-top: 5px;
+}
+
+#flag {
+    width: 35px;
+    margin-top: 5px;
+}
+
+
+#navigation {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.burger_class {
+    /*        cursor: pointer;*/
+    margin: 10px;
+    margin-right: 10px;
+    padding: 0px 5px;
+    z-index: 15;
+}
+
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+    width: 30px;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+    width: 30px;
+}
+
+.nav_class {
+    padding-top: 50px;
+    margin-left: -100vw;
+    height: 100vh;
+    display: block;
+    transition: 0.8s all 0s;
+    background-color: #333;
+    width: 100vw;
+    text-align: center;
+}
+
+.openNav {
+    display: block;
+    margin-left: 0px;
+    transition: 0.8s all 0s;
+    padding-left: 11px;
+}
+
+nav button {
+    background-color: #333;
+    border: 0;
+    color: white;
+    font-family: khmer MN;
+    text-decoration: none;
+    /*    transition: 0.8s all 0s;*/
+    width: 100%;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+}
+
+nav a {
+    padding: 0;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*
+nav a:hover {
+    color: black;
+    background-color: #ddd;
+    transition: 0.15s all 0s;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav button:hover {
+    color: black;
+    background-color: #ddd;
+    transition: 0.15s all 0s;
+    font-size: 20px;
+    text-decoration: none;
+}
+*/
+
+/*------- PROJEKTER -------*/
+
+#projekter {
+    font-size: 0;
+}
+
+.projekt {
+    background-color: pink;
+    width: 100%;
+    font-size: 12px;
+    position: relative;
+}
+
+.projekt img {
+    width: 100%;
+}
+
+.projekt h2 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    font-family: khmer MN;
+}
+
+
+
+
+
+/*------------FOOTER-------------*/
+
+footer {
+    margin-top: 6vh;
+    background-color: #e5e5e5;
+}
+
+.footer_name {
+    margin-left: 8vw;
+}
+
+.footer_name h1 {
+    font-weight: 100;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6vh;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+.email {}
+
+.phone {
+    text-align: right;
+}
+
+.address_some {
+    display: flex;
+    /*    justify-content: space-between;*/
+    margin: 6vh 8vw 10vh 8vw;
+    align-items: flex-end;
+}
+
+.address {
+    flex-grow: 2;
+}
+
+
+.some {
+    text-align: right;
+    flex-grow: 1;
+}
+
+.some img {
+    width: 10vw;
+}
+
+
+
+
+
+/*-----------MEDIA QUERIES------------*/
+
+@media screen and (min-width: 728px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+    .projekt {
+        background-color: blue;
+        width: 50%;
+        display: inline-block;
+
+    }

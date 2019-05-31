@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="navigation">
+
+
+        <div class="burger_class" onclick="burgerFunct()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <header>
+
+            <nav class="nav_class" class="openNav">
+                <a href="index.html"><button>HOME</button></a>
+                <a href="#projekter"><button>PROJEKTER</button></a>
+                <a href="info.html"><button>INFO</button></a>
+                <a href="https://www.facebook.com/tokedesign.dk/"><button><img id="facebook" src="pics/hvidface.png"></button></a> <br>
+                <a href="https://www.instagram.com/tokelauridsen/"><button><img id="instagram" src="pics/hvidinsta.png"></button></a> <br>
+                <a href=""><button><img id="flag" src="pics/english.png"></button></a>
+            </nav>
+
+        </header>
+    </div>
+
+
+
+
+    <!--
+    <header>
+        <div class="left">
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="#projekter">PROJEKTER</a>
+                <a href="info.html">INFO</a>
+            </nav>
+        </div>
+
+        <div class="right">
+            <img src="" alt="english">
+            <img src="" alt="facebook">
+            <img src="" alt="instagram">
+        </div>
+
+    </header>
+-->
+
+
+
+    <!-- forside -->
+
+
+    <h1>TOKE LAURIDSEN</h1>
+    <video src=""></video>
+
+    <!--    loop-view over alle hovedprojekter-->
+
+    <section id="projekter"> </section>
+
+
+
+    <footer>
+
+
+        <div class="footer_name">
+
+            <h1>TOKE LAURIDSEN</h1>
+
+        </div>
+
+
+        <div class="contact">
+
+            <div class="email">
+                <p>Send me an email:
+                    <br>toke@tokedesign.dk </p>
+            </div>
+
+            <div class="phone">
+                <p>Give me a call:<br>23 62 47 62</p>
+            </div>
+
+        </div>
+
+        <div class="address_some">
+
+            <div class="address">
+
+                <p>Come visit me at :
+                    <br>Kødboderne 10 - 12
+                    <br>1714 København V
+                    <br>"Den Hvide Kødby"</p>
+
+
+            </div>
+
+            <div class="some">
+                <a href="https://www.facebook.com/tokedesign.dk/"><img src="pics/face.png" alt="face_footer"></a>
+
+                <a href="https://www.instagram.com/tokelauridsen/"><img src="pics/insta.png" alt="insta_footer"></a>
+
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+
+
+
+
+
+    <script>
+        //------------burgermenu----------//
+
+        var navig = document.querySelector(".nav_class");
+        var burgie = document.querySelector(".burger_class");
+
+        function burgerFunct() {
+            burgie.classList.toggle("change");
+            navig.classList.toggle("openNav");
+        }
+
+
+        //-------------galleri------------//
+
+        let indhold = [];
+        let dest = document.querySelector("#projekter");
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        async function getJson() {
+            let url = "http://sheebanii.com/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/projekter"
+            let jsonData = await fetch(url);
+            indhold = await jsonData.json();
+            visIndhold();
+        }
+
+        function visIndhold() {
+            indhold.forEach(projekt => {
+                let template = `
+                        <div class="projekt">
+
+                            <h2>${projekt.title.rendered}</h2>
+                            <img src = "${projekt.splash_image.guid}">
+
+                       </div>
+                `;
+                if (projekt.hovedprojekt != "Nej") {
+                    dest.insertAdjacentHTML("beforeend", template);
+                    dest.lastElementChild.addEventListener("click", () => {
+                        location.href = "singleView.html?id=" + projekt.id;
+                    });
+                }
+            })
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
