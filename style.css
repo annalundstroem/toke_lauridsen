@@ -4,6 +4,13 @@
     font-family: khmer MN;
 }
 
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
 /*------------FORSIDE-------------*/
 
 
@@ -17,11 +24,6 @@
 
 /*------------BURGER MENU-------------*/
 
-body {
-    background-color: #e5e5e5;
-    margin: 0%;
-    padding: 0;
-}
 
 #facebook {
     width: 35px;
@@ -169,6 +171,29 @@ nav button:hover {
 
 
 
+/*------------ABOUT-------------*/
+
+#about {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#about h1 {
+    font-weight: 100;
+    font-size: 2em;
+}
+
+#about hr {
+    color: #e5e5e5;
+    height: 0.3vh;
+    background-color: #e5e5e5;
+    border: none;
+}
+
+
+
+
+
 
 
 /*------------FOOTER-------------*/
@@ -179,19 +204,20 @@ footer {
 }
 
 .footer_name {
-    margin-left: 8vw;
+    margin-left: 10vw;
 }
 
 .footer_name h1 {
     font-weight: 100;
+    font-size: 2em;
 }
 
 .contact {
     display: flex;
     justify-content: space-between;
     margin-top: 6vh;
-    margin-left: 8vw;
-    margin-right: 8vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .email {}
@@ -203,7 +229,7 @@ footer {
 .address_some {
     display: flex;
     /*    justify-content: space-between;*/
-    margin: 6vh 8vw 10vh 8vw;
+    margin: 6vh 10vw 10vh 10vw;
     align-items: flex-end;
 }
 
