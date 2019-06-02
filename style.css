@@ -21,6 +21,17 @@ body {
     text-align: center;
 }
 
+#forside p {
+    text-align: center;
+    margin-top: 30vh;
+}
+
+/*
+#forside video {
+    position: relative;
+}
+*/
+
 
 /*------------BURGER MENU-------------*/
 
@@ -199,12 +210,13 @@ nav button:hover {
 /*------------FOOTER-------------*/
 
 footer {
-    margin-top: 6vh;
+    margin-top: 0;
     background-color: #e5e5e5;
 }
 
 .footer_name {
     margin-left: 10vw;
+    padding-top: 7vh;
 }
 
 .footer_name h1 {
@@ -231,6 +243,7 @@ footer {
     /*    justify-content: space-between;*/
     margin: 6vh 10vw 10vh 10vw;
     align-items: flex-end;
+    padding-bottom: 7vh;
 }
 
 .address {
@@ -251,9 +264,25 @@ footer {
 
 
 
-/*-----------MEDIA QUERIES------------*/
+/*-----------MEDIA QUERIES iPAD------------*/
 
 @media screen and (min-width: 728px) {
+
+    .projekt {
+        background-color: blue;
+        width: 50%;
+        display: inline-block;
+
+    }
+
+    .some img {
+        width: 5vw;
+    }
+}
+
+/*-----------MEDIA QUERIES DESKTOP------------*/
+
+@media screen and (min-width: 1000px) {
 
     header {
         display: flex;
@@ -261,9 +290,7 @@ footer {
 
     }
 
-
     .projekt {
-        background-color: blue;
         width: 50%;
         display: inline-block;
 
