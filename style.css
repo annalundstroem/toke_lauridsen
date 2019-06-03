@@ -17,20 +17,28 @@ body {
 
 
 #forside h1 {
-    font-size: 3em;
+    font-size: 2.3em;
     text-align: center;
+    color: white;
+    margin-top:
 }
 
 #forside p {
     text-align: center;
-    margin-top: 30vh;
+    margin-top: vh;
+    color: white;
 }
 
-/*
-#forside video {
-    position: relative;
+.splash_video video {
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
 }
-*/
+
+#forside {
+    position: relative;
+    z-index: 2;
+}
 
 
 /*------------BURGER MENU-------------*/
@@ -143,6 +151,7 @@ nav a {
 
 
 
+
 /*------- PROJEKTER -------*/
 
 #projekter {
@@ -165,6 +174,8 @@ nav a {
     position: absolute;
     top: 50%;
     font-family: khmer MN;
+    width: 100vw;
+    text-align: center;
 }
 
 
@@ -335,6 +346,15 @@ footer {
 
     .nav_pages {
         margin-top: 2vh;
+    }
+
+    .nav_some {
+        display: flex;
+        margin-right: 5vw;
+    }
+
+    .nav_some img {
+        width: 25px;
     }
 
     .info_splash img {
