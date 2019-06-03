@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +21,9 @@
 
         <header>
 
-            <nav class="nav_class" class="openNav">
+            <nav class="nav_class" class="openNav" onclick="burgerFunct()">
                 <a href="index.html"><button>HOME</button></a>
-                <a href="#projekter"><button>PROJEKTER</button></a>
+                <a href="index.html#projekter"><button>PROJEKTER</button></a>
                 <a href="info.html"><button>INFO</button></a>
                 <a href="https://www.facebook.com/tokedesign.dk/"><button><img id="facebook" src="pics/hvidface.png"></button></a> <br>
                 <a href="https://www.instagram.com/tokelauridsen/"><button><img id="instagram" src="pics/hvidinsta.png"></button></a> <br>
@@ -32,8 +33,25 @@
         </header>
     </div>
 
+    <div class="info_splash">
 
-    <img src="" alt="">
+
+        <div class="info_splash_mobil">
+
+            <img src="pics/splash_mobil.png" alt="tokelauridsen">
+
+        </div>
+
+
+
+        <div class="info_splash_desktop">
+
+            <img src="pics/splash_desktop.png" alt="tokelauridsen">
+
+        </div>
+
+
+    </div>
 
 
     <section id="about">
@@ -131,6 +149,8 @@
             burgie.classList.toggle("change");
             navig.classList.toggle("openNav");
         }
+
     </script>
 </body>
+
 </html>
