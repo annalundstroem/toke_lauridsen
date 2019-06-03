@@ -60,8 +60,7 @@ body {
 }
 
 header {
-    background-color: white;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 10;
     overflow-y: scroll;
@@ -125,7 +124,6 @@ nav button {
     color: white;
     font-family: khmer MN;
     text-decoration: none;
-    /*    transition: 0.8s all 0s;*/
     width: 100%;
     height: 60px;
     font-size: 25px;
@@ -202,9 +200,6 @@ nav a {
 
 
 
-
-
-
 /*------------FOOTER-------------*/
 
 footer {
@@ -238,7 +233,7 @@ footer {
 .address_some {
     display: flex;
     /*    justify-content: space-between;*/
-    margin: 6vh 10vw 10vh 10vw;
+    margin: 6vh 10vw 0 10vw;
     align-items: flex-end;
     padding-bottom: 7vh;
 }
@@ -283,15 +278,22 @@ footer {
     }
 
     .nav_class_desktop {
-        display: block;
-        background-color: blue;
-        justify-content: space-between;
-        flex-wrap: nowrap;
+        display: flex;
         width: 100vw;
+        justify-content: space-between;
     }
 
     .nav_class_desktop a {
-        color: red;
+        color: white;
+        margin-left: 5vw;
+    }
+
+    .nav_some {
+        display: flex;
+    }
+
+    .info_splash img {
+        width: 100vw;
     }
 
     .projekt {
@@ -306,10 +308,26 @@ footer {
 
     .info_splash_desktop {
         display: block;
+        width: 100vw;
     }
 
     hr {
         display: none;
+    }
+
+    #about {
+        display: flex;
+    }
+
+    .info_contact {
+        flex-grow: 1;
+        flex-basis: 300px;
+    }
+
+    .info_text {
+        flex-grow: 2;
+        flex-basis: 600px;
+        padding-left: 4vw
     }
 
     .some img {
