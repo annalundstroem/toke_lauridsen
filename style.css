@@ -288,6 +288,10 @@ footer {
         margin-left: 5vw;
     }
 
+    .nav_pages {
+        margin-top: 2vh;
+    }
+
     .info_splash img {
         width: 100vw;
     }
@@ -339,6 +343,11 @@ footer {
         display: flex;
         justify-content: space-between;
 
+    }
+
+    .nav_pages {
+        margin-top: 3vh;
+        font-size: 1.4em;
     }
 
     .projekt {
