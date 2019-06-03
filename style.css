@@ -139,6 +139,11 @@ nav a {
     text-align: center;
 }
 
+.nav_class_desktop {
+    display: none;
+}
+
+
 
 /*------- PROJEKTER -------*/
 
@@ -260,12 +265,39 @@ footer {
 
 @media screen and (min-width: 728px) {
 
+    #navigation {
+        justify-content: space-between;
+    }
+
+
+    .burger_class {
+        display: none;
+    }
+
+    .nav_class {
+        display: none;
+    }
+
+    .openNav {
+        display: none;
+    }
+
+    .nav_class_desktop {
+        display: block;
+        background-color: blue;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 100vw;
+    }
+
+    .nav_class_desktop a {
+        color: red;
+    }
 
     .projekt {
         background-color: blue;
         width: 50%;
         display: inline-block;
-
     }
 
     .info_splash_mobil {
