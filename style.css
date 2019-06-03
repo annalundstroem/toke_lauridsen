@@ -238,8 +238,6 @@ footer {
     margin-right: 10vw;
 }
 
-.email {}
-
 .phone {
     text-align: right;
 }
@@ -264,6 +262,39 @@ footer {
 
 .some img {
     width: 10vw;
+}
+
+.footer_desktop {
+    display: none;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.some_desktop p {
+    margin-right: 1vw;
+    /*    padding-top: 0.75vh;*/
+
+}
+
+.footer_facebook_desktop {
+    display: flex;
+    align-items: center;
+}
+
+.footer_facebook_desktop img {
+    width: 35px;
+
+}
+
+.footer_instagram_desktop {
+    display: flex;
+    align-items: center;
+}
+
+.footer_instagram_desktop img {
+    width: 35px;
+
 }
 
 
@@ -379,3 +410,22 @@ footer {
         display: inline-block;
 
     }
+
+    .footer_mobil {
+        display: none;
+    }
+
+    .footer_desktop {
+        display: flex;
+    }
+
+    footer {
+        padding-bottom: 5vh;
+    }
+
+    /*
+
+    .footer_name {
+        margin-left: 6.5vw;
+    }
+*/
