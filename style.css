@@ -181,11 +181,6 @@ nav a {
 }
 
 
-#about {
-    margin-left: 10vw;
-    margin-right: 10vw;
-}
-
 #about h1 {
     font-size: 2em;
 }
@@ -195,6 +190,18 @@ nav a {
     height: 0.3vh;
     background-color: #e5e5e5;
     border: none;
+}
+
+.info_contact {
+    margin-left: 10vw;
+}
+
+.info_text {
+    margin-left: 10vw;
+}
+
+.info_text_video {
+    margin-right: 10vw;
 }
 
 .info_video {
@@ -328,13 +335,23 @@ footer {
 
     .info_contact {
         flex-grow: 1;
-        flex-basis: 300px;
+        flex-basis: 100px;
+    }
+
+    .info_text_video {
+        flex-grow: 2;
+        flex-basis: 200px;
+        margin-bottom: 5vh;
     }
 
     .info_text {
-        flex-grow: 2;
-        flex-basis: 600px;
-        padding-left: 4vw
+        margin-left: 5vw;
+    }
+
+    .info_text_video video {
+        margin-left: 5vw;
+        margin-top: 5vw;
+        width: 50vw;
     }
 
     .some img {
