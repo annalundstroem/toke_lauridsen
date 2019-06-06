@@ -48,7 +48,8 @@
     </div>
 
     <section id="singleview">
-        <div id="luk"><button>←</button></div>
+
+                <div id="luk"><button>←</button></div>
         <div id="indhold"></div>
 
 
@@ -228,9 +229,10 @@
                     document.querySelector(".product_image").style.display = "none";
                 }
             }
-            document.querySelector("#luk button").addEventListener("click", () => {
-                location.href = "index.html#projekter"
-            })
+document.querySelector("#luk button").addEventListener("click", () => {
+location.href = "index.html#projekter"
+})
+
             getJson();
 
         }

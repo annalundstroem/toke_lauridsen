@@ -43,8 +43,8 @@
                 </div>
 
                 <div class="nav_some">
-                    <a href="https://www.facebook.com/tokedesign.dk/"><img class="facebook" src="pics/hvidface.png" alt="facebook"></a> <br>
-                    <a href="https://www.instagram.com/tokelauridsen/"><img class="instagram" src="pics/hvidinsta.png" alt="instagram"></a> <br>
+                    <a href="https://www.facebook.com/tokedesign.dk/" class="facebook"><img src="pics/hvidface.png" alt="facebook"></a> <br>
+                    <a href="https://www.instagram.com/tokelauridsen/" class="instagram"><img src="pics/hvidinsta.png" alt="instagram"></a> <br>
                 </div>
 
             </nav>
@@ -128,9 +128,9 @@
                 </div>
 
                 <div class="some">
-                    <a href="https://www.facebook.com/tokedesign.dk/"><img src="pics/face.png" alt="face_footer"></a>
+                    <a href="https://www.facebook.com/tokedesign.dk/" class="footer_fb"><img src="pics/face.png" alt="face_footer"></a>
 
-                    <a href="https://www.instagram.com/tokelauridsen/"><img src="pics/insta.png" alt="insta_footer"></a>
+                    <a href="https://www.instagram.com/tokelauridsen/" class="footer_ig"><img src="pics/insta.png" alt="insta_footer"></a>
 
                 </div>
 
@@ -220,17 +220,16 @@
                        	</div>
 
                 `;
-                if (projekt.hovedprojekt != "Nej") {
-                    dest.insertAdjacentHTML("beforeend", template);
-                    dest.lastElementChild.addEventListener("click", () => {
-                        location.href = "singleView.html?id=" + projekt.id;
-                    });
-                }
+
+                dest.insertAdjacentHTML("beforeend", template);
+                dest.lastElementChild.addEventListener("click", () => {
+                    location.href = "singleView.html?id=" + projekt.id;
+                });
+
             })
 
 
         }
-
     </script>
 
 </body>

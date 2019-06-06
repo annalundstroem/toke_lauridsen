@@ -19,7 +19,7 @@ body {
 }
 
 #forside h1 {
-    font-size: 2.3em;
+    font-size: 2.6em;
     text-align: center;
     color: white;
 
@@ -66,11 +66,14 @@ body {
 .facebook {
     width: 35px;
     margin-top: 5px;
+
 }
 
 .instagram {
     width: 35px;
     margin-top: 5px;
+
+
 }
 
 
@@ -92,7 +95,8 @@ header {
 
 .burger_class {
     margin: 10px;
-    margin-right: 10px;
+    margin-top: 15px;
+    margin-right: 15px;
     padding: 0px 5px;
     z-index: 15;
 }
@@ -189,6 +193,12 @@ nav a {
     width: 100%;
     text-align: center;
     font-size: 2.3em;
+}
+
+.projekt .singleview_text img {
+    margin-top: 7vh;
+    padding-left: 6vw;
+    width: 70%;
 }
 
 
@@ -335,6 +345,7 @@ footer {
 .footer_desktop {
     display: none;
     justify-content: space-between;
+    margin-top: 2vw;
     margin-left: 10vw;
     margin-right: 10vw;
 }
@@ -351,7 +362,7 @@ footer {
 }
 
 .footer_facebook_desktop img {
-    width: 35px;
+    width: 28px;
 
 }
 
@@ -361,7 +372,7 @@ footer {
 }
 
 .footer_instagram_desktop img {
-    width: 35px;
+    width: 28px;
 
 }
 
@@ -393,11 +404,18 @@ footer {
         display: flex;
         width: 100vw;
         justify-content: space-between;
+        margin-top: 2vw;
     }
 
     .nav_class_desktop a {
         color: white;
         margin-left: 5vw;
+
+
+    }
+
+    .nav_class_desktop .nav_some a {
+        margin-left: 1vw;
     }
 
     .nav_pages a {
@@ -418,6 +436,7 @@ footer {
         display: flex;
         margin-right: 5vw;
         margin-top: 1vh;
+
     }
 
     .nav_some img {
@@ -433,7 +452,7 @@ footer {
     }
 
     #forside {
-        margin-top: 15vh;
+        margin-top: 40vh;
         width: 100vw;
     }
 
@@ -545,12 +564,74 @@ footer {
 
     }
 
+    #forside p {
+        margin-top: 17vh;
+    }
+
     .nav_some img {
         width: 2vw;
     }
 
+    #forside h1 {
+        font-size: 4em;
+    }
+
     .projekt {
         margin-top: -2.5vh;
+
+    }
+
+    #indhold .projekt h1 {
+        padding-left: 12vh;
+        margin-top: 8vh;
+        margin-bottom: 2vh;
+    }
+
+    #indhold .singleview_facts p {
+        text-align: right;
+        margin-right: 0%;
+
+    }
+
+    #indhold .singleview_text p {
+        margin-left: 2.5vw;
+    }
+
+
+    .info_contact p {
+        text-align: right;
+        margin-right: 4vw;
+
+
+
+    }
+
+
+
+    #about {
+        margin-right: 1vw;
+
+    }
+
+    .info_text {
+        margin-right: 10vh;
+        margin-left: 0%;
+    }
+
+    .info_text_video p {
+        margin-left: 0%;
+
+    }
+
+    .info_text_video video {
+        margin-left: 0%;
+
+    }
+
+    .info_headline h1 {
+        padding-left: 12vh;
+        margin-top: 8vh;
+        font-size: 2em;
     }
 
     .footer_mobil {
@@ -562,5 +643,12 @@ footer {
     }
 
     footer {
-        padding-bottom: 5vh;
+
+        padding-bottom: 8vh;
+
+
+    }
+
+    footer h2 {
+        margin-top: 1vw;
     }
