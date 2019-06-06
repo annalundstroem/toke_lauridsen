@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="smed,metal,møbler,speciallavet,design">
+    <title>Toke Lauridsen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="navigation">
+
+
+        <div class="burger_class" onclick="burgerFunct()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <header>
+
+            <nav class="nav_class" class="openNav" onclick="burgerFunct()">
+                <a href="index.html">HJEM</a><br>
+                <a href="index.html#projekter">PROJEKTER</a><br>
+                <a href="info.html">INFO</a><br>
+                <a href="https://www.facebook.com/tokedesign.dk/"><img class="facebook" src="pics/hvidface.png" alt="facebook"></a> <br>
+                <a href="https://www.instagram.com/tokelauridsen/"><img class="instagram" src="pics/hvidinsta.png" alt="instagram"></a> <br>
+            </nav>
+
+
+
+            <nav class="nav_class_desktop">
+
+                <div class="nav_pages">
+                    <a href="index.html">HJEM</a>
+                    <a href="index.html#projekter">TILBAGE TIL PROJEKTER</a>
+                    <a href="info.html">INFO</a>
+                </div>
+
+            </nav>
+
+        </header>
+
+    </div>
+
+    <section id="singleview">
+
+        <div id="indhold"></div>
+        <div id="luk"><button>←</button></div>
+
+    </section>
+
+
+
+    <footer>
+
+
+
+        <div class="footer_name">
+
+            <h2>TOKE LAURIDSEN</h2>
+
+        </div>
+
+        <div class="footer_mobil">
+
+            <div class="contact">
+
+                <div class="email">
+                    <p>Send mig en email:
+                        <br>toke@tokedesign.dk </p>
+                </div>
+
+                <div class="phone">
+                    <p>Ring til mig:<br>23 62 47 62</p>
+                </div>
+
+            </div>
+
+            <div class="address_some">
+
+                <div class="address">
+
+                    <p>Kom og besøg mig her:
+                        <br>Slagterhusgade 7 A
+                        <br>1715 København V</p>
+
+                </div>
+
+                <div class="some">
+                    <a href="https://www.facebook.com/tokedesign.dk/"><img src="pics/face.png" alt="face_footer"></a>
+
+                    <a href="https://www.instagram.com/tokelauridsen/"><img src="pics/insta.png" alt="insta_footer"></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer_desktop">
+
+            <div class="address_desktop">
+
+                <p>Kom og besøg mig her :
+                    <br>Slagterhusgade 7 A
+                    <br>1715 København V</p>
+
+            </div>
+
+            <div class="phone_desktop">
+                <p>Ring til mig:<br>23 62 47 62</p>
+            </div>
+
+            <div class="email_desktop">
+                <p>Send mig en email:
+                    <br>toke@tokedesign.dk </p>
+            </div>
+
+            <div class="some_desktop">
+
+                <div class="footer_facebook_desktop">
+                    <p>Toke Lauridsen</p>
+                    <a href="https://www.facebook.com/tokedesign.dk/"><img src="pics/face.png" alt="face_footer"></a>
+                </div>
+
+                <div class="footer_instagram_desktop">
+                    <p>@tokelauridsen</p>
+                    <a href="https://www.instagram.com/tokelauridsen/"><img src="pics/insta.png" alt="insta_footer"></a>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </footer>
+
+    <script>
+        //------------burgermenu----------//
+
+        var navig = document.querySelector(".nav_class");
+        var burgie = document.querySelector(".burger_class");
+
+        function burgerFunct() {
+            burgie.classList.toggle("change");
+            navig.classList.toggle("openNav");
+        }
+
+
+
+
+
+
+
+        //-------------singleView------------//
+
+
+
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let projekter = [];
+        let projekt;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log(id);
+
+            async function getJson() {
+                let jsonData = await fetch("http://sheebanii.com/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/projekter");
+
+                projekter = await jsonData.json();
+                projekter.forEach(obj => {
+                    if (obj.id == id) {
+                        projekt = obj;
+                    }
+                })
+
+                console.log(projekt)
+                open();
+            }
+
+
+            function open() {
+                document.querySelector("#indhold").innerHTML = `
+                  <div class="projekt">
+
+									<img class="singleview_splash_mobil" src = "${projekt.splash_image_mobil.guid}">
+									<img class="singleview_splash_desktop" src = "${projekt.splash_image_desktop.guid}">
+									<h1>${projekt.title.rendered}</h1>
+
+									<div class="singleview_facts_text">
+
+									<div class="singleview_text">
+									<p>${projekt.content.rendered}</p>
+									<img class="product_image" src = "${projekt.product_image.guid}">
+									</div>
+
+									<div class="singleview_facts">
+									<p>NAVN: ${projekt.client_name}</p>
+									<p>LANCERING: ${projekt.launch_year}</p>
+									<p>${projekt.client_url}</p>
+									</div>
+
+
+									</div>
+
+						</div>
+
+
+
+                    `;
+
+                console.log("product image", projekt.product_image.guid);
+                if (projekt.product_image.guid == undefined) {
+
+                    console.log("test");
+                    document.querySelector(".product_image").style.display = "none";
+                }
+            }
+            document.querySelector("#luk button").addEventListener("click", () => {
+                location.href = "index.html#projekter"
+            })
+            getJson();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

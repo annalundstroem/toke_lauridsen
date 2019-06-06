@@ -20,41 +20,51 @@ body {
     font-size: 2.3em;
     text-align: center;
     color: white;
-    margin-top:
+
 }
 
 #forside p {
     text-align: center;
     margin-top: vh;
     color: white;
+    padding-top: 10vh;
+}
+
+.splash_video_desktop {
+    width: 100vw;
+    position: relative;
+}
+
+.splash_video_desktop {
+    display: none;
+}
+
+.splash_video {
+    position: relative;
+    width: 100vw;
 }
 
 .splash_video video {
-    width: 100vw;
-    position: absolute;
-    z-index: 1;
+    width: 100%;
 }
 
 #forside {
-    position: relative;
+    position: absolute;
     z-index: 2;
+    top: 0;
+
 }
 
 
 /*------------BURGER MENU-------------*/
 
 
-#facebook {
+.facebook {
     width: 35px;
     margin-top: 5px;
 }
 
-#instagram {
-    width: 35px;
-    margin-top: 5px;
-}
-
-#flag {
+.instagram {
     width: 35px;
     margin-top: 5px;
 }
@@ -76,13 +86,11 @@ header {
 }
 
 .burger_class {
-    /*        cursor: pointer;*/
     margin: 10px;
     margin-right: 10px;
     padding: 0px 5px;
     z-index: 15;
 }
-
 
 .bar1,
 .bar2,
@@ -126,23 +134,18 @@ header {
     padding-left: 11px;
 }
 
-nav button {
-    background-color: #333;
-    border: 0;
-    color: white;
-    font-family: khmer MN;
-    text-decoration: none;
-    width: 100%;
-    height: 60px;
-    font-size: 25px;
-    text-align: center;
-}
-
 nav a {
     padding: 0;
     margin-top: 10px;
     text-decoration: none;
     text-align: center;
+    background-color: #333;
+    border: 0;
+    color: white;
+    width: 100%;
+    height: 60px;
+    font-size: 25px;
+
 }
 
 .nav_class_desktop {
@@ -154,25 +157,29 @@ nav a {
 
 /*------- PROJEKTER -------*/
 
+#projekter {
+    font-size: 0;
+}
+
 .projekt {
-    background-color: white;
     width: 100%;
-    font-size: 0.75em;
+    font-size: 12px;
     position: relative;
+}
+
+.galleri_desktop {
+    display: none;
 }
 
 .projekt img {
     width: 100%;
-    margin-top: 0;
-
 }
 
 .projekt h2 {
     color: white;
     position: absolute;
     top: 50%;
-    font-family: khmer MN;
-    width: 100vw;
+    width: 100%;
     text-align: center;
 }
 
@@ -188,7 +195,6 @@ nav a {
     margin-left: 10vw;
     margin-top: 2vh;
 }
-
 
 #about h1 {
     font-size: 2em;
@@ -218,6 +224,47 @@ nav a {
     width: 100vw;
     margin-bottom: 0;
 }
+
+
+
+/*-----------singleView------------*/
+
+.singleview_splash_desktop {
+    display: none;
+}
+
+#luk {
+    box-sizing: border-box;
+    text-align: right;
+    position: absolute;
+}
+
+#luk button {
+    font-size: 3em;
+    border: none;
+    color: white;
+}
+
+#indhold .projekt {
+    margin-bottom: 8vh;
+    width: 100vw;
+}
+
+#indhold .projekt h1 {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 2em;
+}
+
+#indhold .projekt p {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 1.2em;
+}
+
+
+
+
 
 
 
@@ -318,7 +365,6 @@ footer {
         justify-content: space-between;
     }
 
-
     .burger_class {
         display: none;
     }
@@ -342,37 +388,52 @@ footer {
         margin-left: 5vw;
     }
 
+    .nav_pages a {
+        font-size: 1.2em;
+    }
+
     .nav_pages {
         margin-top: 2vh;
+    }
+
+    nav a {
+        background-color: transparent;
+        align-items: center;
     }
 
     .nav_some {
         display: flex;
         margin-right: 5vw;
+        margin-top: 1vh;
     }
 
     .nav_some img {
-        width: 25px;
+        width: 3vw;
+    }
+
+    .splash_video {
+        display: none;
+    }
+
+    .splash_video_desktop {
+        display: block;
     }
 
     .info_splash img {
         width: 100vw;
     }
 
-    /*
-    #projekter {
-        display: flex;
-    }
-*/
     .projekt {
-        background-color: blue;
-        width: 49%;
+        width: 50%;
         display: inline-block;
     }
 
-    .projekt h2 {
-        width: 100%;
+    .galleri_mobil {
+        display: none;
+    }
 
+    .galleri_desktop {
+        display: block;
     }
 
     .info_splash_mobil {
@@ -413,6 +474,36 @@ footer {
         width: 50vw;
     }
 
+    .singleview_splash_mobil {
+        display: none;
+    }
+
+    .singleview_splash_desktop {
+        display: block;
+    }
+
+    #indhold .projekt h1 {
+        margin-top: 5vh;
+    }
+
+    #indhold .projekt .singleview_facts_text {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /*
+	#indhold .projekt .singleview_facts_text .singleview_facts {
+		flex-grow: 1;
+		flex-basis: 100px;
+	}
+
+	#indhold .projekt .singleview_facts_text .singleview_text {
+		flex-grow: 2;
+		flex-basis: 200px;
+		margin-bottom: 5vh;
+	}
+*/
+
     .some img {
         width: 5vw;
     }
@@ -428,9 +519,8 @@ footer {
 
     }
 
-    .nav_pages {
-        margin-top: 3vh;
-        font-size: 1.4em;
+    .nav_some img {
+        width: 2vw;
     }
 
     .projekt {
@@ -450,10 +540,3 @@ footer {
     footer {
         padding-bottom: 5vh;
     }
-
-    /*
-
-    .footer_name {
-        margin-left: 6.5vw;
-    }
-*/
