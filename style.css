@@ -154,19 +154,17 @@ nav a {
 
 /*------- PROJEKTER -------*/
 
-#projekter {
-    font-size: 0;
-}
-
 .projekt {
-    background-color: pink;
+    background-color: white;
     width: 100%;
-    font-size: 12px;
+    font-size: 0.75em;
     position: relative;
 }
 
 .projekt img {
     width: 100%;
+    margin-top: 0;
+
 }
 
 .projekt h2 {
@@ -361,10 +359,20 @@ footer {
         width: 100vw;
     }
 
+    /*
+    #projekter {
+        display: flex;
+    }
+*/
     .projekt {
         background-color: blue;
-        width: 50%;
+        width: 49%;
         display: inline-block;
+    }
+
+    .projekt h2 {
+        width: 100%;
+
     }
 
     .info_splash_mobil {
