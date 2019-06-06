@@ -14,7 +14,9 @@ body {
 
 /*------------FORSIDE-------------*/
 
-
+#forside {
+    margin-top: 25vh;
+}
 
 #forside h1 {
     font-size: 2.3em;
@@ -25,9 +27,10 @@ body {
 
 #forside p {
     text-align: center;
-    margin-top: vh;
     color: white;
     padding-top: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .splash_video_desktop {
@@ -122,7 +125,7 @@ header {
     height: 100vh;
     display: block;
     transition: 0.8s all 0s;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.88);
     width: 100vw;
     text-align: center;
 }
@@ -139,7 +142,7 @@ nav a {
     margin-top: 10px;
     text-decoration: none;
     text-align: center;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.88);
     border: 0;
     color: white;
     width: 100%;
@@ -165,6 +168,7 @@ nav a {
     width: 100%;
     font-size: 12px;
     position: relative;
+    margin-top: -2vh;
 }
 
 .galleri_desktop {
@@ -181,6 +185,7 @@ nav a {
     top: 50%;
     width: 100%;
     text-align: center;
+    font-size: 2.3em;
 }
 
 
@@ -275,6 +280,7 @@ nav a {
 footer {
     margin-top: 0;
     background-color: #e5e5e5;
+    margin-top: -2vh;
 }
 
 .footer_name {

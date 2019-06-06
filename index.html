@@ -24,13 +24,12 @@
 
         <header>
 
-            <nav class="nav_class" class="openNav">
-                <a href="index.html"><button>HOME</button></a>
-                <a href="#projekter"><button>PROJEKTER</button></a>
-                <a href="info.html"><button>INFO</button></a>
-                <a href="https://www.facebook.com/tokedesign.dk/"><button><img id="facebook" src="pics/hvidface.png"></button></a> <br>
-                <a href="https://www.instagram.com/tokelauridsen/"><button><img id="instagram" src="pics/hvidinsta.png"></button></a> <br>
-                <a href=""><button><img id="flag" src="pics/english.png"></button></a>
+            <nav class="nav_class" onclick="burgerFunct()">
+                <a href="index.html">HJEM</a><br>
+                <a href="#projekter">PROJEKTER</a><br>
+                <a href="info.html">INFO</a><br>
+                <a href="https://www.facebook.com/tokedesign.dk/"><img class="facebook" src="pics/hvidface.png" alt="facebook"></a> <br>
+                <a href="https://www.instagram.com/tokelauridsen/"><img class="instagram" src="pics/hvidinsta.png" alt="instagram"></a> <br>
             </nav>
 
 
@@ -38,15 +37,14 @@
             <nav class="nav_class_desktop">
 
                 <div class="nav_pages">
-                    <a href="index.html">HOME</a>
+                    <a href="index.html">HJEM</a>
                     <a href="index.html#projekter">PROJEKTER</a>
                     <a href="info.html">INFO</a>
                 </div>
 
                 <div class="nav_some">
-                    <a href="https://www.facebook.com/tokedesign.dk/"><img id="facebook" src="pics/hvidface.png"></a> <br>
-                    <a href="https://www.instagram.com/tokelauridsen/"><img id="instagram" src="pics/hvidinsta.png"></a> <br>
-                    <a href=""><img id="flag" src="pics/english.png"></a>
+                    <a href="https://www.facebook.com/tokedesign.dk/"><img class="facebook" src="pics/hvidface.png" alt="facebook"></a> <br>
+                    <a href="https://www.instagram.com/tokelauridsen/"><img class="instagram" src="pics/hvidinsta.png" alt="instagram"></a> <br>
                 </div>
 
             </nav>
@@ -56,26 +54,41 @@
     </div>
 
     <div class="splash_video">
+        <video autoplay muted loop src="video/tlsplash_mobile.mp4"></video>
+
+        <section id="forside">
+
+            <h1>TOKE LAURIDSEN</h1>
+
+            <p>Dansk Interiør, Skræddersyet Design, Smedearbejde i Høj Kvalitet</p>
+
+
+        </section>
+
+    </div>
+
+    <div class="splash_video_desktop">
         <video autoplay muted loop src="video/tokesplash.mp4"></video>
+
+        <section id="forside">
+
+            <h1>TOKE LAURIDSEN</h1>
+
+            <p>Dansk Interiør, Skræddersyet Design, Smedearbejde i Høj Kvalitet</p>
+
+
+        </section>
 
     </div>
 
 
 
     <!-- forside -->
-    <section id="forside">
 
-        <h1>TOKE LAURIDSEN</h1>
-
-        <p>Danish Interior, Custom Design,
-            <br>High Quality Metal Work</p>
-
-
-    </section>
 
     <!--    loop-view over alle hovedprojekter-->
 
-    <section id="projekter"></section>
+    <section id="projekter"> </section>
 
 
 
@@ -85,7 +98,7 @@
 
         <div class="footer_name">
 
-            <h1>TOKE LAURIDSEN</h1>
+            <h2>TOKE LAURIDSEN</h2>
 
         </div>
 
@@ -94,12 +107,12 @@
             <div class="contact">
 
                 <div class="email">
-                    <p>Send me an email:
+                    <p>Send mig en email:
                         <br>toke@tokedesign.dk </p>
                 </div>
 
                 <div class="phone">
-                    <p>Give me a call:<br>23 62 47 62</p>
+                    <p>Ring til mig:<br>23 62 47 62</p>
                 </div>
 
             </div>
@@ -108,10 +121,9 @@
 
                 <div class="address">
 
-                    <p>Come visit me at :
-                        <br>Kødboderne 10 - 12
-                        <br>1714 København V
-                        <br>"Den Hvide Kødby"</p>
+                    <p>Kom og besøg mig her:
+                        <br>Slagterhusgade 7 A
+                        <br>1715 København V</p>
 
                 </div>
 
@@ -130,19 +142,18 @@
 
             <div class="address_desktop">
 
-                <p>Come visit me at :
-                    <br>Kødboderne 10 - 12
-                    <br>1714 København V
-                    <br>"Den Hvide Kødby"</p>
+                <p>Kom og besøg mig her :
+                    <br>Slagterhusgade 7 A
+                    <br>1715 København V</p>
 
             </div>
 
             <div class="phone_desktop">
-                <p>Give me a call:<br>23 62 47 62</p>
+                <p>Ring til mig:<br>23 62 47 62</p>
             </div>
 
             <div class="email_desktop">
-                <p>Send me an email:
+                <p>Send mig en email:
                     <br>toke@tokedesign.dk </p>
             </div>
 
@@ -161,11 +172,7 @@
             </div>
 
 
-
-
         </div>
-
-
 
 
     </footer>
@@ -206,9 +213,12 @@
                         <div class="projekt">
 
                             <h2>${projekt.title.rendered}</h2>
-                            <img src = "${projekt.splash_image.guid}">
+							<img class="galleri_mobil" src = "${projekt.galleri_image_mobil.guid}">
+                            <img class="galleri_desktop" src = "${projekt.galleri_image_desktop.guid}">
 
-                       </div>
+
+                       	</div>
+
                 `;
                 if (projekt.hovedprojekt != "Nej") {
                     dest.insertAdjacentHTML("beforeend", template);
@@ -220,6 +230,7 @@
 
 
         }
+
     </script>
 
 </body>
