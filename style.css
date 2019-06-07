@@ -14,18 +14,18 @@ body {
 
 /*------------FORSIDE-------------*/
 
-#forside {
+.forside {
     margin-top: 25vh;
 }
 
-#forside h1 {
+.forside h1 {
     font-size: 2.6em;
     text-align: center;
     color: white;
 
 }
 
-#forside p {
+.forside p {
     text-align: center;
     color: white;
     padding-top: 10vh;
@@ -52,7 +52,7 @@ body {
     width: 100%;
 }
 
-#forside {
+.forside {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -451,7 +451,7 @@ footer {
         display: block;
     }
 
-    #forside {
+    .forside {
         margin-top: 40vh;
         width: 100vw;
     }
@@ -564,7 +564,7 @@ footer {
 
     }
 
-    #forside p {
+    .forside p {
         margin-top: 17vh;
     }
 
@@ -572,7 +572,7 @@ footer {
         width: 2vw;
     }
 
-    #forside h1 {
+    .forside h1 {
         font-size: 4em;
     }
 
