@@ -601,9 +601,6 @@ footer {
     .info_contact p {
         text-align: right;
         margin-right: 4vw;
-
-
-
     }
 
 
@@ -645,10 +642,9 @@ footer {
     footer {
 
         padding-bottom: 8vh;
-
-
     }
 
     footer h2 {
         margin-top: 1vw;
     }
+}
